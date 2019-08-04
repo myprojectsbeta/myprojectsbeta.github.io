@@ -1,0 +1,40 @@
+body{
+	background-color: #fff;	
+}
+.container{
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.todo_list{
+	max-width: 400px;
+	display: block;
+	margin: 0 auto 40px;
+	background-color: orange;
+	padding: 30px;
+	border-radius: 5px;
+}
+h1{
+	text-align: center;
+	margin: 0,0,20px;
+	color: #fff;
+
+}
+.create_new_todo{
+	text-align: center;
+}
+.add{
+	margin-top: 10px;
+	width: 400px;
+	padding: 10px;
+}
+.message{
+	width: 396px;
+}
+.todo {
+  padding-left: 0; }
+  .todo li {
+    padding: 1em;
+    list-style-type: none; }
+    .todo li:not(:last-child) {
+      border-bottom: 1px solid #000; }
+
