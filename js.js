@@ -37,21 +37,17 @@ function displayMessages() {
   });
  };
 
- todo.addEventListener("contextmenu", function (event) {
+ todo.addEventListener("click", function (event) {
  	event.preventDefault();
    todolist.forEach(function (item , i) {
    	if(item.todo === event.target.innerHTML){
-   		if(event.type){
+   		
    			todolist.splice( i , 1);
-   		}
-   		displayMessages();
+   		
+ displayMessages();
    		localStorage.setItem("todo" , JSON.stringify(todolist));
    		if (todolist.length == 0){
-   		window.location.reload();};
+  		window.location.reload();};
    	}
    })
  });
-
-//todo.addEventListener("change" , function (event) {
-//	let valueL = todo.querySelector("[for = "+ event.target.ge)
-//})
