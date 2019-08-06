@@ -52,43 +52,4 @@ function displayMessages() {
    })
  });
 
-/*todo.addEventListener("ontouchstart" , function (event) {
-	event.preventDefault();
-   todolist.forEach(function (item , i) {
-   	if(item.todo === event.target.innerHTML){
-   		 if(event.ontouchstart){
-   			todolist.splice( i , 1);
-   		}
- displayMessages();
-   		localStorage.setItem("todo" , JSON.stringify(todolist));
-   		if (todolist.length == 0){
-  		window.location.reload();};
-   	}
-   })
-
-})
-
-
-
-
-
-
-//todo.addEventListener("change" , function (event) {
-//	let valueL = todo.querySelector("[for = "+ event.target.ge)
-//})
-
-/*todo.addEventListener("touchstart" , function (event) {
-//	event.preventDefault();
-//   todolist.forEach(function (item , i) {
-   	if(item.todo === event.target.innerHTML){
-//   		if(event.type || event.touchstart){
-   			todolist.splice( i , 1);
- //  		}
-   		displayMessages();
-   		localStorage.setItem("todo" , JSON.stringify(todolist));
-   		if (todolist.length == 0){
-   		window.location.reload();};
-   	}
-   })//
-//}) */ 
 
