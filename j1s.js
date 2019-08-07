@@ -29,7 +29,7 @@ function displayMessages() {
   todolist.forEach(function (item , i) {
   	  displayMessages += `
 <li>
-<input type="checkbox" id="item_${i} " class="remove"   >
+<input type="checkbox"  id="item_${i} " ${item.checked ? "checked" : "" } >
 <label for="item_${i}">${item.todo}</label>
 </li>
   	`;
@@ -38,7 +38,7 @@ function displayMessages() {
  };
 
  todo.addEventListener("click", function (event) {
- 	event.preventDefault();
+ 	
    todolist.forEach(function (item , i) {
    	if(item.todo === event.target.innerHTML){
    		
@@ -52,43 +52,16 @@ function displayMessages() {
    })
  });
 
-/*todo.addEventListener("ontouchstart" , function (event) {
-	event.preventDefault();
-   todolist.forEach(function (item , i) {
-   	if(item.todo === event.target.innerHTML){
-   		 if(event.ontouchstart){
-   			todolist.splice( i , 1);
-   		}
- displayMessages();
-   		localStorage.setItem("todo" , JSON.stringify(todolist));
-   		if (todolist.length == 0){
-  		window.location.reload();};
-   	}
+todo.addEventListener("change" , function (event) {
+  let IdInput = event.target.getAttribute("id");
+  let forLabel = todo.querySelector("[for=" + IdInput + "]");
+  let valueLabel = forLabel.innerHTML;
+   todolist.forEach(function (item) {
+      if(item.todo === valueLabel){
+        item.checked = !item.checked;
+        localStorage.setItem("todo" , JSON.stringify(todolist));
+      }
    })
-
 })
 
-
-
-
-
-
-//todo.addEventListener("change" , function (event) {
-//	let valueL = todo.querySelector("[for = "+ event.target.ge)
-//})
-
-/*todo.addEventListener("touchstart" , function (event) {
-//	event.preventDefault();
-//   todolist.forEach(function (item , i) {
-   	if(item.todo === event.target.innerHTML){
-//   		if(event.type || event.touchstart){
-   			todolist.splice( i , 1);
- //  		}
-   		displayMessages();
-   		localStorage.setItem("todo" , JSON.stringify(todolist));
-   		if (todolist.length == 0){
-   		window.location.reload();};
-   	}
-   })//
-//}) */ 
 
