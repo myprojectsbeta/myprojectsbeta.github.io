@@ -1,19 +1,18 @@
 body{
-	background-color: #fff;	
+	background-color: #666;	
 }
-.container{
-	margin: 0 auto;
-	padding-top: 50px;
-}
+
 .todo_list{
-	max-width: 400px;
+	margin: 0 auto;
+	width: 100%;
+	position: fixed;
 	display: block;
 	margin: 0 auto 40px;
-	background-color: orange;
+	background-color: #222;
 	padding: 30px;
-	border-radius: 5px;
+	border-radius: 15px;
 }
-h1{
+h1{ font-size: 50px;
 	text-align: center;
 	margin: 0,0,20px;
 	color: #fff;
@@ -23,12 +22,18 @@ h1{
 	text-align: center;
 }
 .add{
+	max-width: 40px;
+	border-radius: 15px;
+	color: #50f148;
+	background-color: grey;
 	margin-top: 10px;
 	width: 400px;
 	padding: 10px;
 }
 .message{
-	width: 396px;
+	border-radius: 13px;
+	height: 40px;
+	width: 596px;
 }
 .todo {
   padding-left: 0; }
@@ -38,3 +43,6 @@ h1{
     .todo li:not(:last-child) {
       border-bottom: 1px solid #000; }
 
+.todo{
+	color: #fff;
+}
